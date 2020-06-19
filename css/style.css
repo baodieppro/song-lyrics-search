@@ -7,7 +7,7 @@ html{
 }
 
 body {
-    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background-image: linear-gradient(to top, #a77b04 0%, #a77b04 1%, #f2f564 100%);
     font-family: 'Montserrat', sans-serif;
     min-height: 100%;
 }
@@ -70,7 +70,7 @@ h2 {
     justify-content: flex-end!important;
 }
 .input input[type="submit"]{
-    background-color: #6f86d6;
+    background-color: #317daf;
     padding: .5rem 2rem;
     color: white;
     align-self: flex-end;
@@ -79,13 +79,13 @@ h2 {
 } 
 .input input[type="submit"]:hover {
     cursor: pointer;
-    background-color: #384e9d;
+    background-color: #152d83;
 }
 
 .error {
     padding: 1rem;
     border: 1px solid red;
-    background-color: rgb(249, 121, 121);
+    background-color: rgb(199, 36, 36);
     color: white;
 }
 
@@ -93,4 +93,6 @@ h2 {
 #resultado {
     white-space: pre-wrap;
     padding: 2rem;
+
+    margin-left: 1rem;
 }
