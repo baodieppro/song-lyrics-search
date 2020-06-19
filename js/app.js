@@ -22,7 +22,21 @@ UI.formSearch.addEventListener('submit', (e) => {
     //form is completed, conect to api
     const api = new API(artist, song);
     api.getApi().then((data) => {
-      console.log(data);
+      if (data.response.lyrics) {
+        //song exists
+        const lyric = data.response.lyrics;
+        UI.divResult.textContent = lyric;
+      } else {
+        //song doesn't exist
+        UI.divMsj.innerHTML = "The song doesn't exist, try another search";
+        UI.divMsj.classList.add('error');
+
+        setTimeout(() => {
+          UI.divMsj.innerHTML = '';
+          UI.divMsj.classList.remove('error');
+          UI.formSearch.reset();
+        }, 3000);
+      }
     });
   }
 });
